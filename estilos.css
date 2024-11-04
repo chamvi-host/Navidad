@@ -1,23 +1,30 @@
 body {
-    background-color: #f2f9ff; /* Fondo suave */
+    background-image: url('navidad-bg.jpg'); /* Cambia esto por la ruta de tu imagen de fondo navideña */
+    background-size: cover; /* Cubrir toda la pantalla */
     font-family: 'Arial', sans-serif;
-    color: #4a4a4a;
+    color: #fff;
     text-align: center;
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0; /* Eliminar márgenes */
+    display: flex; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    position: relative; /* Para permitir la posición absoluta de elementos secundarios */
 }
 
 .container {
     padding: 20px;
     border-radius: 10px;
-    background-color: #ffffff; /* Fondo blanco para el contenido */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    background-color: rgba(255, 0, 0, 0.8); /* Fondo rojo navideño semi-transparente */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     margin: 30px auto;
     width: 90%;
     max-width: 600px;
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #d83c3c; /* Rojo navideño */
+    font-size: 3em;
+    color: #ffeb3b; /* Amarillo brillante para el título */
 }
 
 p {
@@ -26,7 +33,7 @@ p {
 }
 
 button {
-    background-color: #d83c3c; /* Rojo navideño */
+    background-color: #ffcc00; /* Amarillo para el botón */
     color: white;
     border: none;
     border-radius: 5px;
@@ -34,10 +41,11 @@ button {
     font-size: 1.2em;
     cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.3s; /* Transición suave para el hover */
 }
 
 button:hover {
-    background-color: #b33030; /* Rojo más oscuro al pasar el ratón */
+    background-color: #ffc107; /* Color más claro al pasar el ratón */
 }
 
 .confetti-bg {
@@ -48,10 +56,10 @@ button:hover {
 
 .confetti-piece {
     position: absolute;
-    background: #ffcc00;
+    background: #ffeb3b; /* Color amarillo para el confeti */
     width: 10px;
     height: 10px;
-    opacity: 0.6;
+    opacity: 0.8;
     animation: fall 5s infinite;
 }
 
