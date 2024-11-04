@@ -14,22 +14,25 @@ body {
 }
 
 .container {
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    background-color: rgba(255, 0, 0, 0.6); /* Fondo rojo navideño más transparente */
+    background-color: rgba(255, 0, 0, 0.8); /* Fondo rojo navideño más transparente */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     margin: 30px auto;
     width: 90%; /* Ajustar el ancho al 90% del contenedor */
     max-width: 600px; /* Máximo ancho para pantallas grandes */
+    position: relative; /* Para poder colocar el mensaje de forma absoluta */
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em; /* Aumentar el tamaño del título */
     color: #ffeb3b; /* Amarillo brillante para el título */
+    margin: 0; /* Sin margen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el título */
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Aumentar el tamaño del texto */
     margin: 10px 0;
 }
 
@@ -38,20 +41,50 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1.2em;
+    padding: 12px 25px; /* Aumentar el padding */
+    font-size: 1.5em; /* Aumentar el tamaño de fuente del botón */
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s; /* Transición suave para el hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para el botón */
 }
 
 button:hover {
     background-color: #ffc107; /* Color más claro al pasar el ratón */
 }
 
+.wish-input-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Colocar elementos en columna */
+}
+
+textarea {
+    width: 100%; /* Hacer que el cuadro de texto ocupe todo el ancho */
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ffcc00; /* Borde amarillo */
+    font-size: 1.2em; /* Tamaño de fuente del textarea */
+    resize: none; /* Evitar que el usuario cambie el tamaño */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+}
+
+.submit-wish {
+    margin-top: 10px;
+    background-color: #28a745; /* Color verde para el botón de envío */
+    border: none;
+}
+
+.submit-wish:hover {
+    background-color: #218838; /* Color más oscuro al pasar el ratón */
+}
+
 .confetti-bg {
-    position: relative;
-    height: 200px; /* Espacio para el confeti */
+    position: absolute; /* Colocar el confeti en el fondo */
+    bottom: 0; /* Alinear el confeti al fondo */
+    left: 0;
+    right: 0;
+    height: 150px; /* Espacio para el confeti */
     overflow: hidden;
 }
 
@@ -74,8 +107,4 @@ button:hover {
 .confetti-piece:nth-child(2) { left: 20%; animation-delay: 0.5s; }
 .confetti-piece:nth-child(3) { left: 30%; animation-delay: 1s; }
 .confetti-piece:nth-child(4) { left: 40%; animation-delay: 1.5s; }
-.confetti-piece:nth-child(5) { left: 50%; animation-delay: 2s; }
-.confetti-piece:nth-child(6) { left: 60%; animation-delay: 2.5s; }
-.confetti-piece:nth-child(7) { left: 70%; animation-delay: 3s; }
-.confetti-piece:nth-child(8) { left: 80%; animation-delay: 3.5s; }
-.confetti-piece:nth-child(9) { left: 90%; animation-delay: 4s; }
+.confetti-piece:nth-child(5) { left: 50%; animation-delay
