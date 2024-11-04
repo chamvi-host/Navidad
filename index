@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 ¡Feliz Navidad! 🎄</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Asegúrate de crear o modificar estilos.css -->
+    <script src="https://cdn.emailjs.com/sdk/email.min.js"></script> <!-- Enlace actualizado al SDK de EmailJS -->
+    <style>
+        body {
+            background-color: #f2f9ff; /* Fondo suave */
+            font-family: 'Arial', sans-serif;
+            color: #4a4a4a;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff; /* Fondo blanco para el contenido */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 30px auto;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #d83c3c; /* Rojo navideño */
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #d83c3c; /* Rojo navideño */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #b33030; /* Rojo más oscuro al pasar el ratón */
+        }
+
+        .confetti-bg {
+            position: relative;
+            height: 200px; /* Espacio para el confeti */
+            overflow: hidden;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            background: #ffcc00;
+            width: 10px;
+            height: 10px;
+            opacity: 0.6;
+            animation: fall 5s infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-50px); opacity: 1; }
+            100% { transform: translateY(500px); opacity: 0; }
+        }
+
+        /* Coloca el confeti en posiciones aleatorias */
+        .confetti-piece:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .confetti-piece:nth-child(2) { left: 20%; animation-delay: 0.5s; }
+        .confetti-piece:nth-child(3) { left: 30%; animation-delay: 1s; }
+        .confetti-piece:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+        .confetti-piece:nth-child(5) { left: 50%; animation-delay: 2s; }
+        .confetti-piece:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+        .confetti-piece:nth-child(7) { left: 70%; animation-delay: 3s; }
+        .confetti-piece:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+        .confetti-piece:nth-child(9) { left: 90%; animation-delay: 4s; }
+    </style>
+</head>
+<body>
+
+    <audio id="christmas-sound" src="christmas-song.mp3" preload="auto"></audio> <!-- Archivo de sonido navideño -->
+
+    <div class="container">
+        <h1>🎄 ¡Feliz Navidad JOEL! 🎄</h1>
+        <p>¡Espero que tengas un día maravilloso lleno de amor, alegría y felicidad!</p>
+        <p class="confetti">🎊🎁🎉🎈</p>
+
+        <button id="wish-button">Haz un deseo 🎁</button>
+        
+        <div id="wish-input-container" style="display: none;">
+            <textarea id="wish-input" placeholder="Escribe tu deseo aquí..." rows="4" cols="50"></textarea>
+            <br>
+            <button onclick="submitWish()">Enviar deseo</button>
+        </div>
+
+        <div id="wish-message" style="display: none;">
+            <p>¡Que todos tus deseos se hagan realidad esta Navidad! 🎄</p>
+        </div>
+    </div>
+
+    <div class="confetti-bg">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+
+    <script>
+        // Inicializa EmailJS con tu Public Key
+        (function() {
+            emailjs.init("Rd49ckEW23EpcRPNC"); // Reemplaza con tu Public Key de EmailJS
+        })();
+
+        // Maneja el clic en el botón de "Haz un deseo"
+        document.getElementById("wish-button").onclick = function() {
+            const sound = document.getElementById("christmas-sound");
+            sound.play(); // Reproduce el sonido navideño
+            document.getElementById("wish-input-container").style.display = "block"; // Muestra el cuadro de texto
+            this.style.display = "none"; // Oculta el botón después de hacer clic
+        };
+
+        // Función para enviar el deseo por EmailJS
+        function submitWish() {
+            const wish = document.getElementById("wish-input").value;
+            if (wish) {
+                // Envía el deseo utilizando el servicio y plantilla configurados en EmailJS
+                emailjs.send("service_pr95j7p", "template_789shhs", {
+                    wish: wish // Asegúrate de que "wish" coincide con el campo en tu plantilla de EmailJS
+                })
+                .then(function(response) {
+                    console.log("Éxito", response.status, response.text);
+                    document.getElementById("wish-message").style.display = "block"; // Muestra el mensaje de éxito
+                    document.getElementById("wish-input-container").style.display = "none"; // Oculta el cuadro de texto
+                }, function(error) {
+                    console.log("Error", error);
+                    alert("Hubo un problema al enviar tu deseo, por favor intenta de nuevo.");
+                });
+            } else {
+                alert("Por favor, escribe un deseo antes de enviarlo.");
+            }
+        }
+    </script>
+
+</body>
+</html>
