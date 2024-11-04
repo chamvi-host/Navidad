@@ -1,173 +1,156 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.77">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 ¡Feliz Navidad! 🎄</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Asegúrate de crear o modificar estilos.css -->
+    <script src="https://cdn.emailjs.com/sdk/email.min.js"></script> <!-- Enlace actualizado al SDK de EmailJS -->
+    <style>
+        body {
+            background-color: #f2f9ff; /* Fondo suave */
+            font-family: 'Arial', sans-serif;
+            color: #4a4a4a;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff; /* Fondo blanco para el contenido */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 30px auto;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #d83c3c; /* Rojo navideño */
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #d83c3c; /* Rojo navideño */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #b33030; /* Rojo más oscuro al pasar el ratón */
+        }
+
+        .confetti-bg {
+            position: relative;
+            height: 200px; /* Espacio para el confeti */
+            overflow: hidden;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            background: #ffcc00;
+            width: 10px;
+            height: 10px;
+            opacity: 0.6;
+            animation: fall 5s infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-50px); opacity: 1; }
+            100% { transform: translateY(500px); opacity: 0; }
+        }
+
+        /* Coloca el confeti en posiciones aleatorias */
+        .confetti-piece:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .confetti-piece:nth-child(2) { left: 20%; animation-delay: 0.5s; }
+        .confetti-piece:nth-child(3) { left: 30%; animation-delay: 1s; }
+        .confetti-piece:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+        .confetti-piece:nth-child(5) { left: 50%; animation-delay: 2s; }
+        .confetti-piece:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+        .confetti-piece:nth-child(7) { left: 70%; animation-delay: 3s; }
+        .confetti-piece:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+        .confetti-piece:nth-child(9) { left: 90%; animation-delay: 4s; }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="es"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;🎄 ¡Feliz Navidad! 🎄&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="estilos.css"&gt; &lt;!-- Asegúrate de crear o modificar estilos.css --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.emailjs.com/sdk/email.min.js"&gt;&lt;/script&gt; &lt;!-- Enlace actualizado al SDK de EmailJS --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f2f9ff; /* Fondo suave */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #4a4a4a;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.container {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #ffffff; /* Fondo blanco para el contenido */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 20px rgba(0,0,0,0.1);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 30px auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 90%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 600px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h1 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #d83c3c; /* Rojo navideño */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>p {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 10px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #d83c3c; /* Rojo navideño */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #b33030; /* Rojo más oscuro al pasar el ratón */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-bg {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: relative;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 200px; /* Espacio para el confeti */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overflow: hidden;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: absolute;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #ffcc00;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 0.6;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>animation: fall 5s infinite;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes fall {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>0% { transform: translateY(-50px); opacity: 1; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>100% { transform: translateY(500px); opacity: 0; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Coloca el confeti en posiciones aleatorias */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(1) { left: 10%; animation-delay: 0s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(2) { left: 20%; animation-delay: 0.5s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(3) { left: 30%; animation-delay: 1s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(4) { left: 40%; animation-delay: 1.5s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(5) { left: 50%; animation-delay: 2s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(6) { left: 60%; animation-delay: 2.5s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(7) { left: 70%; animation-delay: 3s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(8) { left: 80%; animation-delay: 3.5s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.confetti-piece:nth-child(9) { left: 90%; animation-delay: 4s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;audio id="christmas-sound" src="christmas-song.mp3" preload="auto"&gt;&lt;/audio&gt; &lt;!-- Archivo de sonido navideño --&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1&gt;🎄 ¡Feliz Navidad JOEL! 🎄&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;¡Espero que tengas un día maravilloso lleno de amor, alegría y felicidad!&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="confetti"&gt;🎊🎁🎉🎈&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button id="wish-button"&gt;Haz un deseo 🎁&lt;/button&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="wish-input-container" style="display: none;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;textarea id="wish-input" placeholder="Escribe tu deseo aquí..." rows="4" cols="50"&gt;&lt;/textarea&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;br&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="submitWish()"&gt;Enviar deseo&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="wish-message" style="display: none;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;¡Que todos tus deseos se hagan realidad esta Navidad! 🎄&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="confetti-bg"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="confetti-piece"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Inicializa EmailJS con tu Public Key</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>(function() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>emailjs.init("Rd49ckEW23EpcRPNC"); // Reemplaza con tu Public Key de EmailJS</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>})();</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Maneja el clic en el botón de "Haz un deseo"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById("wish-button").onclick = function() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const sound = document.getElementById("christmas-sound");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>sound.play(); // Reproduce el sonido navideño</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById("wish-input-container").style.display = "block"; // Muestra el cuadro de texto</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>this.style.display = "none"; // Oculta el botón después de hacer clic</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Función para enviar el deseo por EmailJS</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function submitWish() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const wish = document.getElementById("wish-input").value;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (wish) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Envía el deseo utilizando el servicio y plantilla configurados en EmailJS</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>emailjs.send("service_pr95j7p", "template_789shhs", {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>wish: wish // Asegúrate de que "wish" coincide con el campo en tu plantilla de EmailJS</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.then(function(response) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.log("Éxito", response.status, response.text);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>document.getElementById("wish-message").style.display = "block"; // Muestra el mensaje de éxito</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>document.getElementById("wish-input-container").style.display = "none"; // Oculta el cuadro de texto</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}, function(error) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.log("Error", error);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>alert("Hubo un problema al enviar tu deseo, por favor intenta de nuevo.");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>alert("Por favor, escribe un deseo antes de enviarlo.");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+    <audio id="christmas-sound" src="christmas-song.mp3" preload="auto"></audio> <!-- Archivo de sonido navideño -->
+
+    <div class="container">
+        <h1>🎄 ¡Feliz Navidad JOEL! 🎄</h1>
+        <p>¡Espero que tengas un día maravilloso lleno de amor, alegría y felicidad!</p>
+        <p class="confetti">🎊🎁🎉🎈</p>
+
+        <button id="wish-button">Haz un deseo 🎁</button>
+        
+        <div id="wish-input-container" style="display: none;">
+            <textarea id="wish-input" placeholder="Escribe tu deseo aquí..." rows="4" cols="50"></textarea>
+            <br>
+            <button onclick="submitWish()">Enviar deseo</button>
+        </div>
+
+        <div id="wish-message" style="display: none;">
+            <p>¡Que todos tus deseos se hagan realidad esta Navidad! 🎄</p>
+        </div>
+    </div>
+
+    <div class="confetti-bg">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+
+    <script>
+        // Inicializa EmailJS con tu Public Key
+        (function() {
+            emailjs.init("Rd49ckEW23EpcRPNC"); // Reemplaza con tu Public Key de EmailJS
+        })();
+
+        // Maneja el clic en el botón de "Haz un deseo"
+        document.getElementById("wish-button").onclick = function() {
+            const sound = document.getElementById("christmas-sound");
+            sound.play(); // Reproduce el sonido navideño
+            document.getElementById("wish-input-container").style.display = "block"; // Muestra el cuadro de texto
+            this.style.display = "none"; // Oculta el botón después de hacer clic
+        };
+
+        // Función para enviar el deseo por EmailJS
+        function submitWish() {
+            const wish = document.getElementById("wish-input").value;
+            if (wish) {
+                // Envía el deseo utilizando el servicio y plantilla configurados en EmailJS
+                emailjs.send("service_pr95j7p", "template_789shhs", {
+                    wish: wish // Asegúrate de que "wish" coincide con el campo en tu plantilla de EmailJS
+                })
+                .then(function(response) {
+                    console.log("Éxito", response.status, response.text);
+                    document.getElementById("wish-message").style.display = "block"; // Muestra el mensaje de éxito
+                    document.getElementById("wish-input-container").style.display = "none"; // Oculta el cuadro de texto
+                }, function(error) {
+                    console.log("Error", error);
+                    alert("Hubo un problema al enviar tu deseo, por favor intenta de nuevo.");
+                });
+            } else {
+                alert("Por favor, escribe un deseo antes de enviarlo.");
+            }
+        }
+    </script>
+
 </body>
 </html>
