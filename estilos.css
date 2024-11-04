@@ -1,6 +1,7 @@
 body {
     background-image: url('navidad-bg.jpg'); /* Cambia esto por la ruta de tu imagen de fondo navideña */
     background-size: cover; /* Cubrir toda la pantalla */
+    background-position: center; /* Centrar la imagen de fondo */
     font-family: 'Arial', sans-serif;
     color: #fff;
     text-align: center;
@@ -15,11 +16,11 @@ body {
 .container {
     padding: 20px;
     border-radius: 10px;
-    background-color: rgba(255, 0, 0, 0.8); /* Fondo rojo navideño semi-transparente */
+    background-color: rgba(255, 0, 0, 0.6); /* Fondo rojo navideño más transparente */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     margin: 30px auto;
-    width: 90%;
-    max-width: 600px;
+    width: 90%; /* Ajustar el ancho al 90% del contenedor */
+    max-width: 600px; /* Máximo ancho para pantallas grandes */
 }
 
 h1 {
